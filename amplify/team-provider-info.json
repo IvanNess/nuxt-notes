@@ -1,0 +1,23 @@
+{
+  "staging": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-nuxtapp-staging-154046-authRole",
+      "UnauthRoleArn": "arn:aws:iam::473143679199:role/amplify-nuxtapp-staging-154046-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::473143679199:role/amplify-nuxtapp-staging-154046-authRole",
+      "Region": "eu-central-1",
+      "DeploymentBucketName": "amplify-nuxtapp-staging-154046-deployment",
+      "UnauthRoleName": "amplify-nuxtapp-staging-154046-unauthRole",
+      "StackName": "amplify-nuxtapp-staging-154046",
+      "StackId": "arn:aws:cloudformation:eu-central-1:473143679199:stack/amplify-nuxtapp-staging-154046/985d52f0-4294-11ee-8d6d-063a008fe346",
+      "AmplifyAppId": "d3r4xau205ekyu"
+    },
+    "categories": {
+      "auth": {
+        "nuxtapp": {}
+      },
+      "api": {
+        "nuxtapp": {}
+      }
+    }
+  }
+}

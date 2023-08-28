@@ -1,0 +1,30 @@
+type Note 
+  @model 
+  @auth(rules: [{ allow: owner }])
+{
+  id: ID! @primaryKey
+  title: String!
+  description: String
+  body: String!
+  tags: [NoteTag] @hasMany(indexName: "byNote", fields: ["id"])
+}
+
+type Tag 
+  @model 
+  @auth(rules: [{ allow: owner }])
+{
+  id: ID! @primaryKey
+  label: String!
+  notes: [NoteTag] @hasMany(indexName: "byTag", fields: ["id"])
+}
+
+type NoteTag 
+  @model 
+  @auth(rules: [{ allow: owner }]) 
+{
+  id: ID! @primaryKey
+  noteId: ID! @index(name: "byNote")
+  tagId: ID! @index(name: "byTag")
+  note: Note! @belongsTo(fields: ["noteId"])
+  tag: Tag! @belongsTo(fields: ["tagId"])
+}
